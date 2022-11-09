@@ -12,9 +12,9 @@ let index = 0
 
 convertButton.addEventListener('click', function(useranswer){
     userIinput = numberInput.value
-
-    if (userIinput > 3999, userIinput < 1) {
-        result.innerHTML = 'Допустимая область значений: [1 ... 3999]'
+    
+    if (userIinput > 3999) {
+        result.innerHTML = 'Допустимая область значений: [1 ... 3999]';
     } else {
         while (userIinput > 0) {
             if(rim[index] <= userIinput){

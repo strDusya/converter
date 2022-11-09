@@ -20,7 +20,6 @@ convertButton.addEventListener('click', function(useranswer){
             if(rim[index] <= userIinput){
                 userIinput = userIinput - rim[index]
                 useranswer = useranswer + rim1[index]
-                console.log(userIinput)
             } else {
                 index = index + 1
             }

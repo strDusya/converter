@@ -21,14 +21,15 @@ let useranswerINT = 0
 convertButtonNumber.addEventListener('click',(useranswerSTR) => {
     userIinput = numberInput.value
     let index = 0
+
     
     if (userIinput > 3999) {
-        result.innerHTML = 'Допустимая область значений: [1 ... 3999]';
+        resultRoman.innerHTML = 'Допустимая область значений: [1 ... 3999]';
     } else {
         while (userIinput > 0) {
-            if(rim[index] <= userIinput){
-                userIinput = userIinput - rim[index]
-                useranswerSTR = useranswerSTR + rim1[index]
+            if (rim[index] <= userIinput) {
+                userIinput -= rim[index]
+                useranswerSTR += rim1[index]
             } else {
                 index = index + 1
             }
@@ -48,14 +49,14 @@ convertButtonRoman.addEventListener('click',(useranswerINT) => {
 
     while ((userIinput).length > index) {
         if(index + 1 > len){
-            useranswerINT = useranswerINT + rim[rim1.indexOf(userIinput[index])]
+            summ += rim[rim1.indexOf(userIinput[index])]
         } else {
             if (rim[rim1.indexOf(userIinput[index])] < rim[rim1.indexOf(userIinput[index + 1])]) {
-                summ = summ + Number(rim[rim1.indexOf(userIinput[index + 1])]) - Number(rim[rim1.indexOf(userIinput[index])])
-                index = index + 2
+                summ += Number(rim[rim1.indexOf(userIinput[index + 1])]) - Number(rim[rim1.indexOf(userIinput[index])])
+                index += 2
             } else {
-                summ = summ + Number(rim[rim1.indexOf(userIinput[index])])
-                index = index + 1
+                summ += Number(rim[rim1.indexOf(userIinput[index])])
+                index += 1
             }
             
         }

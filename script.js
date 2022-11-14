@@ -11,58 +11,52 @@ let convertButtonRoman = document.querySelector('.RomanButton')
 let resultRoman = document.querySelector('.resultRoman')
 let resultNumber = document.querySelector('.resultNumber')
 
-let userIinput = 0
-let useranswerSTR = ''
-let useranswerINT = 0
 
 
-
-
-convertButtonNumber.addEventListener('click',(useranswerSTR) => {
-    userIinput = numberInput.value
+convertButtonNumber.addEventListener('click',() => {
+    let userIinput = numberInput.value
     let index = 0
-
     
-    if (userIinput > 3999) {
+    if (userIinput > 3999 || userIinput < 1) {
         resultRoman.innerHTML = 'Допустимая область значений: [1 ... 3999]';
     } else {
+        useranswer = ''
         while (userIinput > 0) {
             if (rim[index] <= userIinput) {
                 userIinput -= rim[index]
-                useranswerSTR += rim1[index]
+                useranswer += rim1[index]
             } else {
                 index = index + 1
             }
         }
         index = 0
-        resultRoman.innerHTML = useranswerSTR.substring(21, )
+        resultRoman.innerHTML = useranswer
     }
 } )
 
 
 
-convertButtonRoman.addEventListener('click',(useranswerINT) => {
-    userIinput = RomanInput.value.split('')
+convertButtonRoman.addEventListener('click',() => {
+    let userIinput = RomanInput.value.split('')
     let len = (userIinput).length
     let index = 0
-    let summ = 0
+    let useranswer = 0
 
     while ((userIinput).length > index) {
         if(index + 1 > len){
-            summ += rim[rim1.indexOf(userIinput[index])]
+            useranswer += rim[rim1.indexOf(userIinput[index])]
         } else {
             if (rim[rim1.indexOf(userIinput[index])] < rim[rim1.indexOf(userIinput[index + 1])]) {
-                summ += Number(rim[rim1.indexOf(userIinput[index + 1])]) - Number(rim[rim1.indexOf(userIinput[index])])
+                useranswer += (rim[rim1.indexOf(userIinput[index + 1])]) - (rim[rim1.indexOf(userIinput[index])])
                 index += 2
             } else {
-                summ += Number(rim[rim1.indexOf(userIinput[index])])
+                useranswer += (rim[rim1.indexOf(userIinput[index])])
                 index += 1
             }
             
         }
     }
-    useranswerINT = summ
-    summ = 0
+
     index = 0
-    resultNumber.innerHTML = useranswerINT
+    resultNumber.innerHTML = useranswer
 })

@@ -42,6 +42,7 @@ convertButtonRoman.addEventListener('click',() => {
     let index = 0
     let useranswer = 0
 
+    
     while ((userIinput).length > index) {
         if(index + 1 > len){
             useranswer += rim[rim1.indexOf(userIinput[index])]
@@ -57,6 +58,9 @@ convertButtonRoman.addEventListener('click',() => {
         }
     }
 
+
     index = 0
     resultNumber.innerHTML = useranswer
+
+
 })

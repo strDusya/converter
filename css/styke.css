@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header {
+    display: flex;
+    background: #e9edc9;
+    width: 350px;
+    justify-content: center;
+
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header h1:hover {
+    color: #e63946;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fefae0;
+    width: 350px;
+    height: 400px;
+}
+
+.container {
+    display: block;
+}
+
+.input-div {
+    margin-bottom: 20px;
+}
+
+.input-div input {
+    font-size: 18px;
+}
+
+.input-div button {
+    font-size: 18px;
+}
+
+.input-div button span {
+    margin: 10px;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output span {
+    font-size: 20px;
+}
+
+.output-number {
+    text-align: center;
+    min-width: 50px;
+    background: #e63946;
+}
+
+.output-number {
+    max-width: 310px;
+}
+
+.result {
+    font-size: 15px;
+}
+
+.hr {
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+    border-top: 1px solid black;
+}
+
+
+
+.history {
+    display: flex;
+    margin: 10px 0 0;
+    text-align: center;
+    flex-direction: column;
+    height: 100px;
+    overflow: auto;
+}
+
+.history h4 {
+    position: sticky;
+    top: 0;
+    background: #fefae0;
+}
+
+
+footer {
+    background: #faedcd;
+    width: 350px;
+    text-align: center;
+}
